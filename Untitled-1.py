@@ -21,3 +21,26 @@ class Complex:
 
     def __neg__(self):
         return Complex(-self.a, -self.b)
+    
+    def __mul__(self, other):
+        real_part = self.a * other.a - self.b * other.b
+        imaginary_part = self.a * other.b + self.b * other.a
+        return Complex(real_part, imaginary_part)
+
+    def __truediv__(self, other):
+        denominator = other.a**2 + other.b**2
+        real_part = (self.a * other.a + self.b * other.b) / denominator
+        imaginary_part = (self.b * other.a - self.a * other.b) / denominator
+        return Complex(real_part, imaginary_part)
+
+
+A = Complex(1, 2)
+B = Complex(3, 4)
+
+sum_result = A + B
+difference_result = A - B
+product_result = A * B
+
+print("sum:", sum_result)
+print("difference:", difference_result)
+print("product:", product_result)
