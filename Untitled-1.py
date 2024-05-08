@@ -39,8 +39,11 @@ B = Complex(3, 4)
 
 sum_result = A + B
 difference_result = A - B
-product_result = A * B
+product_result = A * B 
+division_result = A / B
 
 print("sum:", sum_result)
 print("difference:", difference_result)
 print("product:", product_result)
+print("division:", division_result)
+
